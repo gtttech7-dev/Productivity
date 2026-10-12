@@ -1,0 +1,1 @@
+const KEY='focus-dashboard-v1';const initial={tasks:[],goals:[],categories:['Trabalho','Estudos','Pessoal','Finanças','Saúde'],settings:{theme:'dark'}};export function load(){try{return{...initial,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch{return initial}}export function save(s){try{localStorage.setItem(KEY,JSON.stringify(s));return true}catch{return false}}
